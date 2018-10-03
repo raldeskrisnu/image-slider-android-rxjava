@@ -2,7 +2,7 @@ package com.id.myrepublic.glider_slide.model;
 
 import java.io.Serializable;
 
-public class Image implements Serializable {
+public class Image {
 
     private String name;
     private String small, medium, large;
