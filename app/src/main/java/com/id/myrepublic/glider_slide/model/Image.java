@@ -1,22 +1,25 @@
 package com.id.myrepublic.glider_slide.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Image {
 
     private String name;
     private String small, medium, large;
     private String timestamp;
+    private ImageResult url;
 
     public Image() {
     }
 
-    public Image(String name, String small, String medium, String large, String timestamp) {
+    public Image(String name, String small, String medium, String large, String timestamp,ImageResult url) {
         this.name = name;
         this.small = small;
         this.medium = medium;
         this.large = large;
         this.timestamp = timestamp;
+        this.url = url;
     }
 
     public String getName() {
@@ -57,5 +60,13 @@ public class Image {
 
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public void setUrl(ImageResult url){
+        this.url = url;
+    }
+
+    public ImageResult getUrl() {
+        return url;
     }
 }
