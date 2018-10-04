@@ -1,10 +1,7 @@
 package com.id.myrepublic.glider_slide.activity;
 
-import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -16,7 +13,6 @@ import com.id.myrepublic.glider_slide.presenter.GlideViewInterface;
 import com.smarteist.autoimageslider.SliderLayout;
 import com.smarteist.autoimageslider.SliderView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -38,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements GlideViewInterfac
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mvpInit();
-        setupViews();
         getMovieList();
 
         sliderLayout.setIndicatorAnimation(SliderLayout.Animations.FILL); //set indicator animation by using SliderLayout.Animations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
@@ -47,10 +42,6 @@ public class MainActivity extends AppCompatActivity implements GlideViewInterfac
 
     private void mvpInit() {
         mainPresenter = new GlidePresenter(this);
-    }
-
-    private void setupViews(){
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private void getMovieList() {
